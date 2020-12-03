@@ -1,0 +1,27 @@
+<idea-plugin>
+    <id>pers.tommas.emacsflavor</id>
+    <name>EmacsFlavor</name>
+    <vendor email="tommas1988@live.com">Tommas Yuan</vendor>
+
+    <description><![CDATA[
+    Enhancement of default Emacs keymap
+    Target to provide original emacs experience
+    ]]></description>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.lang</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <actionConfigurationCustomizer implementation="pers.tommas.emacsflavor.actions.EmacsFlavorActionManager$Customizer"/>
+    </extensions>
+
+    <applicationListeners>
+        <listener class="pers.tommas.emacsflavor.listeners.EmacsKeymapActiveListener" topic="com.intellij.openapi.keymap.KeymapManagerListener"/>
+    </applicationListeners>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
