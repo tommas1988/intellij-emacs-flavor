@@ -5,6 +5,9 @@ import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.IdeActions;
 import com.intellij.openapi.actionSystem.impl.ActionConfigurationCustomizer;
 import com.intellij.openapi.keymap.KeymapUtil;
+import com.intellij.openapi.project.Project;
+import com.intellij.openapi.project.ProjectManager;
+import com.intellij.openapi.wm.StatusBar;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
@@ -37,6 +40,7 @@ public class EmacsFlavorActionManager {
         }
 
         actionReplaced = true;
+        showMessage("EmacsFlavor enabled");
     }
 
     public static void restoreActions(ActionManager actionManager) {
@@ -48,5 +52,18 @@ public class EmacsFlavorActionManager {
         }
 
         actionReplaced = false;
+        showMessage("EmacsFlavor disabled");
+    }
+
+    private static void showMessage(String message) {
+        ProjectManager projectManager = ProjectManager.getInstance();
+        if (projectManager == null)
+            return;
+
+        for (Project project : projectManager.getOpenProjects()) {
+            if (!project.isDisposed()) {
+                StatusBar.Info.set(message, project);
+            }
+        }
     }
 }
