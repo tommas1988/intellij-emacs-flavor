@@ -20,6 +20,6 @@ intellij {
 }
 patchPluginXml {
     changeNotes """
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>"""
+<em>When first install this plugin, swich to other non emacs keymaps and then switch back to the default emacs keymap or others than based on it.</em><br>
+Currently EmacsFlavor only make the ENTER key works like emacs dose in the find mode.<br>"""
 }

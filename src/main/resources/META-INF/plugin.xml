@@ -4,7 +4,8 @@
     <vendor email="tommas1988@live.com">Tommas Yuan</vendor>
 
     <description><![CDATA[
-    Enhancement of default Emacs keymap. Target to provide original emacs experience
+    Enhancement of default Emacs keymap. Target to provide original emacs experience.<br/>
+    <a href="https://github.com/tommas1988/intellij-emacs-flavor">GitHub repository</a>
     ]]></description>
 
     <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
