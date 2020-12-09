@@ -4,7 +4,15 @@
     <vendor email="tommas1988@live.com">Tommas Yuan</vendor>
 
     <description><![CDATA[
-    Enhancement of default Emacs keymap. Target to provide original emacs experience.<br/>
+    <p>Enhancement of default intellij emacs keymap. Target to provide original emacs experience.</p><br/>
+
+    <h2>How to use:</h2>
+    <p>Just switch to the default intellij emacs keymap or others that based on it, EmacsFlavor will replace some actions and restore when you switch to other keymaps.</p>
+    <i>When you first install EmacsFlavor, you may need first switch to other keymap and then switch back. "EmacsFlavor enabled" will display on status bar when active</i>
+
+    <h2>Features:</h2>
+    <p>Currently EmacsFlavor only make the ENTER key works like emacs dose in the find mode.</p>
+
     <a href="https://github.com/tommas1988/intellij-emacs-flavor">GitHub repository</a>
     ]]></description>
 
