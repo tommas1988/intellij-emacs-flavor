@@ -1,4 +1,4 @@
-<idea-plugin>
+<idea-plugin url="https://github.com/tommas1988/intellij-emacs-flavor">
     <id>pers.tommas.emacsflavor</id>
     <name>EmacsFlavor</name>
     <vendor email="tommas1988@live.com">Tommas Yuan</vendor>
@@ -19,6 +19,8 @@
     <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
     <depends>com.intellij.modules.lang</depends>
+
+    <idea-version since-build="201.8538.31"/>
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
