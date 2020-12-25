@@ -4,7 +4,11 @@ import com.intellij.openapi.actionSystem.ActionManager;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.IdeActions;
 import com.intellij.openapi.actionSystem.impl.ActionConfigurationCustomizer;
+import com.intellij.openapi.keymap.Keymap;
+import com.intellij.openapi.keymap.KeymapManager;
 import com.intellij.openapi.keymap.KeymapUtil;
+import com.intellij.openapi.keymap.impl.DefaultKeymapImpl;
+import com.intellij.openapi.keymap.impl.KeymapImpl;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.project.ProjectManager;
 import com.intellij.openapi.wm.StatusBar;
@@ -27,6 +31,16 @@ public class EmacsFlavorActionManager {
     public static class Customizer implements ActionConfigurationCustomizer {
         @Override
         public void customize(@NotNull ActionManager actionManager) {
+            // For customized keymap, we need parse it to read its parent
+            Keymap activeKeymap = KeymapManager.getInstance().getActiveKeymap();
+            if (activeKeymap.getParent() == null) {
+                if (!(activeKeymap instanceof DefaultKeymapImpl)
+                        && activeKeymap instanceof KeymapImpl) {
+                    // trigger parsing the keymap definition
+                    ((KeymapImpl) activeKeymap).getOwnActionIds();
+                }
+            }
+
             if (KeymapUtil.isEmacsKeymap()) {
                 replaceActions(actionManager);
             }
