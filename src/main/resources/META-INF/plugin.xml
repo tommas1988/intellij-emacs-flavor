@@ -8,10 +8,14 @@
 
     <h2>How to use:</h2>
     <p>Just switch to the default intellij emacs keymap or others that based on it, EmacsFlavor will replace some actions and restore when you switch to other keymaps.</p>
-    <i>When you first install EmacsFlavor, you may need first switch to other keymap and then switch back. "EmacsFlavor enabled" will display on status bar when active</i>
+    <b>IMPORTANT!!!</b><br/>
+    <b>When you install/update EmacsFlavor, you may need first switch to other keymap and then switch back. "EmacsFlavor enabled" will display on status bar when active</b>
 
     <h2>Features:</h2>
-    <p>Currently EmacsFlavor only make the ENTER key works like emacs dose in the find mode.</p>
+    <ul>
+    <li>ENTER key works like emacs dose in the find mode.</li>
+    <li>Tab selection in emacs style.</li>
+    </ul>
 
     <a href="https://github.com/tommas1988/intellij-emacs-flavor">GitHub repository</a>
     ]]></description>
