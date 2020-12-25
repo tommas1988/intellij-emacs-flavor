@@ -21,6 +21,7 @@ public class EmacsFlavorActionManager {
 
     static {
         emacsFlavorActionMap.put(IdeActions.ACTION_FIND, new IncrementalFindAction());
+        emacsFlavorActionMap.put("EditorIndentSelection", new LangIndentSelectionAction());
     }
 
     public static class Customizer implements ActionConfigurationCustomizer {
