@@ -5,17 +5,16 @@ import com.intellij.find.SearchReplaceComponent;
 import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.editor.Caret;
 import com.intellij.openapi.editor.Editor;
-import com.intellij.openapi.editor.actions.IncrementalFindAction;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class EmacsFlavorIncrementalFindAction extends IncrementalFindAction {
-    public EmacsFlavorIncrementalFindAction() {
+public class IncrementalFindAction extends com.intellij.openapi.editor.actions.IncrementalFindAction {
+    public IncrementalFindAction() {
         super();
         setupHandler(new Handler(false));
     }
 
-    public static class Handler extends IncrementalFindAction.Handler {
+    public static class Handler extends com.intellij.openapi.editor.actions.IncrementalFindAction.Handler {
         public Handler(boolean isReplace) {
             super(isReplace);
         }

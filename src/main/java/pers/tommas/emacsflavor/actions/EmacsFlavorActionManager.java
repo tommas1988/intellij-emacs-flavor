@@ -20,7 +20,7 @@ public class EmacsFlavorActionManager {
     private static final Map<String, AnAction> emacsFlavorActionMap = new HashMap<>();
 
     static {
-        emacsFlavorActionMap.put(IdeActions.ACTION_FIND, new EmacsFlavorIncrementalFindAction());
+        emacsFlavorActionMap.put(IdeActions.ACTION_FIND, new IncrementalFindAction());
     }
 
     public static class Customizer implements ActionConfigurationCustomizer {
