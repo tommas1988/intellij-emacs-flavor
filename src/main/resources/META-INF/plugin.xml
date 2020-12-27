@@ -37,5 +37,7 @@
 
     <actions>
         <!-- Add your actions here -->
+        <action class="pers.tommas.emacsflavor.actions.ToUpperCaseAction" id="EF.ToUpperCase" text="Upper Case"/>
+        <action class="pers.tommas.emacsflavor.actions.ToLowerCaseAction" id="EF.ToLowerCase" text="Lower Case"/>
     </actions>
 </idea-plugin>
