@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'pers.tommas.emacsflavor'
-version '1.1-SNAPSHOT'
+version '1.2-SNAPSHOT'
 
 repositories {
     mavenCentral()
@@ -21,6 +21,6 @@ intellij {
 }
 patchPluginXml {
     changeNotes """
-Tab selection in emacs style
+Add Upper Case & Lower Case actions
 """
 }
