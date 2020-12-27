@@ -1,5 +1,6 @@
 package pers.tommas.emacsflavor.actions;
 
+import com.intellij.ide.plugins.PluginManager;
 import com.intellij.openapi.actionSystem.ActionManager;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.IdeActions;
@@ -50,6 +51,10 @@ public class EmacsFlavorActionManager {
     public static void replaceActions(ActionManager actionManager) {
         for (String actionId : emacsFlavorActionMap.keySet()) {
             AnAction originAction = actionManager.getAction(actionId);
+            if (originAction == null) {
+                PluginManager.getLogger().error(String.format("Action: %s not found\n", actionId));
+                continue;
+            }
             originActionMap.put(actionId, originAction);
             actionManager.replaceAction(actionId, emacsFlavorActionMap.get(actionId));
         }
