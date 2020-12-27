@@ -1,0 +1,19 @@
+<keymap version="1" name="MyEmacs" parent="Emacs">
+  <action id="EF.ToLowerCase">
+    <keyboard-shortcut first-keystroke="ctrl x" second-keystroke="ctrl l" />
+  </action>
+  <action id="EF.ToUpperCase">
+    <keyboard-shortcut first-keystroke="ctrl x" second-keystroke="ctrl p" />
+  </action>
+  <action id="Back">
+    <keyboard-shortcut first-keystroke="ctrl alt left" />
+      <keyboard-shortcut first-keystroke="ctrl c" second-keystroke="ctrl p" />
+  </action>
+  <action id="Forward">
+    <keyboard-shortcut first-keystroke="ctrl alt right" />
+    <keyboard-shortcut first-keystroke="ctrl c" second-keystroke="ctrl n" />
+  </action>
+  <action id="Terminal.CopySelectedText">
+    <keyboard-shortcut first-keystroke="ctrl insert" />
+  </action>
+</keymap>
